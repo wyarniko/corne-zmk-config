@@ -15,6 +15,8 @@ normal Corne keys. The other six center positions are not used by this keymap.
   `RBKT`, which is `ъ` with the standard Russian host layout.
 - Pressing the outermost left and right thumb keys together toggles RGB
   underglow.
+- While holding the `Esc` thumb key, use `Q/W` for hue, `E/R` for brightness,
+  and `T` for the next RGB effect.
 - All six center positions use `&none`.
 - Both encoder bindings are retained from the vendor configuration.
 
