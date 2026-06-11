@@ -13,6 +13,8 @@ normal Corne keys. The other six center positions are not used by this keymap.
   the left thumb.
 - The dedicated `RBKT` key is replaced by the `P + LBKT` combo. It produces
   `RBKT`, which is `ъ` with the standard Russian host layout.
+- Pressing the outermost left and right thumb keys together toggles RGB
+  underglow.
 - All six center positions use `&none`.
 - Both encoder bindings are retained from the vendor configuration.
 
