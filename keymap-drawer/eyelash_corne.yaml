@@ -297,7 +297,7 @@ layers:
 combos:
 - p: [1, 15, 29]
   k: '&soft_off'
-- p: [2, 3]
+- p: [1, 2]
   k: $$mdi:keyboard-esc$$
 - p: [7, 8]
   k: (
