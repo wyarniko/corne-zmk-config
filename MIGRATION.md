@@ -19,6 +19,7 @@ normal Corne keys. The other six center positions are not used by this keymap.
   underglow.
 - While holding the `Esc` thumb key, use `Q/W` for hue, `E/R` for brightness,
   and `T` for the next RGB effect.
+- `Q + P + joystick press` toggles the `ADJUST` service layer.
 - The five-way switch on the right half controls the mouse pointer; pressing it
   sends a left click.
 - The remaining center position uses `&none`.
