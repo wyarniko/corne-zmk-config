@@ -45,11 +45,11 @@ layers:
   - {t: \, h: '$$mdi:apple-keyboard-option$$', s: '|'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - LGUI
-  - {t: '$$mdi:keyboard-esc$$', h: MSE}
-  - {t: '$$mdi:keyboard-return$$', h: SYM}
+  - {t: '$$mdi:keyboard-esc$$', h: MOUSE}
+  - {t: '$$mdi:keyboard-return$$', h: SYMBOLS}
   - {t: '$$mdi:backspace$$', h: RGUI}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: NUM}
-  SYM:
+  - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBERS}
+  SYMBOLS:
   - _
   - {t: F1, h: LGUI}
   - F2
@@ -98,7 +98,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  NUM:
+  NUMBERS:
   - KP NUM
   - KP SLASH
   - KP 7
@@ -147,7 +147,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  MSE:
+  MOUSE:
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB HUD
   - RGB HUI
@@ -196,7 +196,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  ADJ:
+  ADJUST:
   - $$mdi:progress-download$$
   - '&studio_unlock'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
