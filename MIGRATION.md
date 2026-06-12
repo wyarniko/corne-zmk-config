@@ -11,8 +11,10 @@ normal Corne keys. The other six center positions are not used by this keymap.
 - The normal alpha positions and all six thumb keys retain their Jorne actions.
 - The dedicated `LWIN` key is removed; `LGUI` remains available on `Q` and on
   the left thumb.
-- The dedicated `RBKT` key is replaced by the `P + LBKT` combo. It produces
-  `RBKT`, which is `ъ` with the standard Russian host layout.
+- `N + M` produces `PIPE` (`|` on an English host layout).
+- `M + Comma` produces `LBKT` (`[` on an English host layout).
+- `Comma + Dot` produces `RBKT` (`]` on an English host layout and `ъ` on the
+  standard Russian host layout).
 - Pressing the outermost left and right thumb keys together toggles RGB
   underglow.
 - While holding the `Esc` thumb key, use `Q/W` for hue, `E/R` for brightness,
