@@ -17,6 +17,7 @@
 #define MOUSE 3
 #define ADJUST 4
 #define GAME 5
+#define GAME_UTIL 6
 
 &lt { quick-tap-ms = <219>; };
 &mt { quick-tap-ms = <219>; };
@@ -197,10 +198,21 @@
         game_layer {
             display-name = "GAME";
             bindings = <
-&trans  &kp Q   &kp W   &trans              &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp A   &kp S   &kp D              &kp F   &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans              &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans              &trans  &trans                              &trans  &trans  &trans
+&kp GRAVE  &kp Q       &kp E  &kp W  &kp R  &kp F  &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp LSHFT   &kp A  &kp S  &kp D  &kp G  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp Z      &kp LCTRL   &kp X  &kp C  &kp V  &kp B  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &kp SPACE    &mo GAME_UTIL  &kp ESC             &trans  &trans  &trans
+            >;
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+
+        game_util_layer {
+            display-name = "GAME UTIL";
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                               &trans  &trans  &trans
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };

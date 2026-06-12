@@ -25,6 +25,17 @@ normal Corne keys. The other six center positions are not used by this keymap.
 - The remaining center position uses `&none`.
 - Both encoder bindings are retained from the vendor configuration.
 
+## CS2 game layer
+
+The `GAME` layer shifts movement one column to the right:
+
+- Physical `E/S/D/F` send `W/A/S/D`.
+- Physical `A` sends `Left Shift`.
+- Physical `Z` sends `Left Control`.
+- The original left `Control` position sends `Z`.
+- The left thumbs send `Space`, hold `GAME UTIL`, and `Escape`.
+- While holding `GAME UTIL`, physical `Q/W/E/R/T` send `1/2/3/4/5`.
+
 All Jorne combos were translated to the Eyelash Corne matrix positions. The
 vendor `Q+S+Z` soft-off combo is also retained.
 
