@@ -317,5 +317,7 @@ combos:
   k: {t: ']', s: '}'}
 - p: [42, 47]
   k: RGB TOG
+- p: [1, 11, 20]
+  k: {t: ADJUST, h: toggle}
 - p: [7, 22, 36]
   k: {t: GAME, h: toggle}
