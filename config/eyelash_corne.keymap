@@ -163,10 +163,10 @@
         mouse_layer {
             display-name = "MSE";
             bindings = <
-&trans  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &trans           &trans          &msc SCRL_LEFT   &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
-&trans  &trans            &trans            &trans            &mkp RCLK         &trans            &trans           &trans          &trans           &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-&trans  &trans            &trans            &trans            &mkp LCLK         &trans            &trans                           &trans          &trans           &trans          &trans          &trans        &trans           &trans
-                                                            &trans            &trans           &trans                                          &trans          &trans        &trans
+&trans  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF       &trans                    &trans          &msc SCRL_LEFT   &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &trans
+&trans  &trans            &trans            &trans            &mkp RCLK         &trans                &trans                    &trans          &trans           &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans
+&trans  &trans            &trans            &trans            &mkp LCLK         &trans                &trans                                    &trans          &trans           &trans          &trans          &trans          &trans           &trans
+                                                            &trans            &trans                &trans                                                   &trans          &trans           &trans
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
@@ -174,10 +174,10 @@
         adjust_layer {
             display-name = "ADJ";
             bindings = <
-&bootloader   &studio_unlock  &none         &none         &none         &none         &sys_reset             &none            &none         &none         &none         &studio_unlock  &bootloader
-&bt BT_CLR    &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans                 &sys_reset       &trans        &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-&out OUT_TOG  &none           &none         &none         &none         &none         &trans                                  &trans        &none         &none         &none         &none         &none         &out OUT_TOG
-                                              &trans     &none         &trans                                              &trans        &none         &trans
+&bootloader   &studio_unlock  &none         &none         &none         &none            &sys_reset                    &none         &none         &none         &none         &studio_unlock  &bootloader
+&bt BT_CLR    &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &trans                        &sys_reset    &trans        &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
+&out OUT_TOG  &none           &none         &none         &none         &none            &trans                                      &trans        &none         &none         &none         &none         &none         &out OUT_TOG
+                                            &trans       &none         &trans                                                   &trans        &none         &trans
             >;
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
