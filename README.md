@@ -59,6 +59,9 @@ A combo triggers when all listed keys are pressed together.
 | Outermost thumb keys | Toggle RGB |
 | `Q + S + Z` held for 2 seconds | Deep sleep |
 
+Combos are disabled on `GAME` and `GAME UTIL`, except `Y + H + N`, which
+turns `GAME` off.
+
 With the standard Russian macOS input layout, the `[` HID key produces `х`,
 and the `]` HID key produces `ъ`.
 
@@ -94,7 +97,9 @@ RGB settings are persisted in flash storage.
 | Original `Ctrl` position | `Z` |
 | Three left thumb keys | `Space`, hold `GAME UTIL`, `Esc` |
 
-On `GAME UTIL`, physical `Q/W/E/R/T` send `1/2/3/4/5`.
+On `GAME UTIL`, physical `Q/W/R/T` send `1/2/4/5`, and the original `Ctrl`
+position sends `3`. Physical `E` keeps moving forward, so re-pressing forward
+while holding `GAME UTIL` never selects the knife.
 
 ## Service Layer
 

@@ -34,7 +34,9 @@ The `GAME` layer shifts movement one column to the right:
 - Physical `Z` sends `Left Control`.
 - The original left `Control` position sends `Z`.
 - The left thumbs send `Space`, hold `GAME UTIL`, and `Escape`.
-- While holding `GAME UTIL`, physical `Q/W/E/R/T` send `1/2/3/4/5`.
+- While holding `GAME UTIL`, physical `Q/W/R/T` send `1/2/4/5`, and the
+  original left `Control` position sends `3`. Physical `E` stays forward.
+- Combos are disabled on `GAME` and `GAME UTIL`, except the `Y+H+N` toggle.
 
 All Jorne combos were translated to the Eyelash Corne matrix positions. The
 vendor `Q+S+Z` soft-off combo is also retained.
