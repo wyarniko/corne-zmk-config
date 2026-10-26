@@ -85,7 +85,9 @@ On the `MOUSE` layer:
 - `E/R` decrease and increase RGB brightness;
 - `T` selects the next RGB effect.
 
-RGB settings are persisted in flash storage.
+Lighting is per-key (zmk-pro-rgb module): by default a pressed key lights up
+and fades out. RGB settings are not persisted and reset to this default after
+a restart. The LED map is in `config/rgb_pro_led_map.h`.
 
 ## Game Layer
 

@@ -248,6 +248,19 @@ parse_config:
       shifted: $$mdi:bluetooth-connect$$
       tap: ""
       hold: $$mdi:arrow-down-bold$$
+    # RGB (zmk-pro-rgb)
+    "&rgb_pro RGBP_TOG 0": RGB TOG
+    "&rgb_pro 0 0": RGB TOG
+    "&rgb_pro RGBP_EFF 0": RGB EFF
+    "&rgb_pro 3 0": RGB EFF
+    "&rgb_pro RGBP_HUI 0": RGB HUI
+    "&rgb_pro 5 0": RGB HUI
+    "&rgb_pro RGBP_HUD 0": RGB HUD
+    "&rgb_pro 6 0": RGB HUD
+    "&rgb_pro RGBP_BRI 0": RGB BRI
+    "&rgb_pro 7 0": RGB BRI
+    "&rgb_pro RGBP_BRD 0": RGB BRD
+    "&rgb_pro 8 0": RGB BRD
     # Reset
     "&sys_reset":
       type: bootloader
