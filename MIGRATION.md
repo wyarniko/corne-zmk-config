@@ -45,8 +45,8 @@ vendor `Q+S+Z` soft-off combo is also retained.
 
 GitHub Actions builds:
 
-- `eyelash_corne_right` with `nice_view`
-- `eyelash_corne_studio_left` with `nice_view` and ZMK Studio
+- `eyelash_corne_right` with `nice_view_gem`
+- `eyelash_corne_studio_left` with `nice_view_gem` and ZMK Studio
 - `settings_reset`
 
 Flash the right and left firmware to their matching halves. Use

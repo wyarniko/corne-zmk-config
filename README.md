@@ -123,7 +123,7 @@ Firmware is built automatically by
 after every push. The `firmware` artifact contains:
 
 - `eyelash_corne_studio_left.uf2` — left central half;
-- `eyelash_corne_right nice_view-nice_nano_v2-zmk.uf2` — right half;
+- `eyelash_corne_right nice_view_gem-nice_nano_v2-zmk.uf2` — right half;
 - `settings_reset-nice_nano_v2-zmk.uf2` — clears saved settings.
 
 ## Flashing

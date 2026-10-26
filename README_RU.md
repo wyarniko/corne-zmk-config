@@ -124,7 +124,7 @@ Combo срабатывает при одновременном нажатии у
 Готовый artifact `firmware` содержит:
 
 - `eyelash_corne_studio_left.uf2` — левая центральная половина;
-- `eyelash_corne_right nice_view-nice_nano_v2-zmk.uf2` — правая половина;
+- `eyelash_corne_right nice_view_gem-nice_nano_v2-zmk.uf2` — правая половина;
 - `settings_reset-nice_nano_v2-zmk.uf2` — очистка сохранённых настроек.
 
 ## Прошивка
