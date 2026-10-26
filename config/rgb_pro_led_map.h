@@ -20,20 +20,23 @@
 
 #include <zephyr/kernel.h>
 
-#if defined(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+#if defined(CONFIG_RGB_PRO_EYELASH_CALIBRATE)
+
+/* Calibration build: key N lights LED N on both halves. */
+const uint8_t key_to_led[] = {
+     0,  1,  2,  3,  4,  5,
+     6,  7,  8,  9, 10, 11,
+    12, 13, 14, 15, 16, 17,
+                18, 19, 20,
+};
+
+#elif defined(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
 
 const uint8_t key_to_led[] = {
     18, 17, 12, 11,  4,  3,
     19, 16, 13, 10,  5,  2,
     20, 15, 14,  9,  6,  1,
                  8,  7,  0,
-};
-
-const uint8_t key_col[] = {
-    0, 1, 2, 3, 4, 5,
-    0, 1, 2, 3, 4, 5,
-    0, 1, 2, 3, 4, 5,
-             3, 4, 5,
 };
 
 #else
@@ -45,6 +48,16 @@ const uint8_t key_to_led[] = {
      0,  7,  8,
 };
 
+#endif
+
+#if defined(CONFIG_RGB_PRO_EYELASH_CALIBRATE) || defined(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+const uint8_t key_col[] = {
+    0, 1, 2, 3, 4, 5,
+    0, 1, 2, 3, 4, 5,
+    0, 1, 2, 3, 4, 5,
+             3, 4, 5,
+};
+#else
 /* Columns continue after the left half, skipping column 6 for the
  * five-way switch, so sweeping effects run across both halves. */
 const uint8_t key_col[] = {
@@ -53,7 +66,6 @@ const uint8_t key_col[] = {
     7, 8, 9, 10, 11, 12,
     7, 8, 9,
 };
-
 #endif
 
 const uint8_t key_row[] = {

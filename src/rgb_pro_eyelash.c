@@ -44,6 +44,22 @@ static const int8_t pos_to_key[] = {
 
 BUILD_ASSERT(ARRAY_SIZE(pos_to_key) == 48, "Keymap has 48 positions");
 
+#if defined(CONFIG_RGB_PRO_EYELASH_CALIBRATE)
+
+/* Keep the last pressed LED fully lit until the next press, so it is easy to
+ * see which key it sits under. */
+static uint8_t lit_led;
+
+static void calibrate_refresh(struct k_work *work);
+static K_WORK_DELAYABLE_DEFINE(calibrate_work, calibrate_refresh);
+
+static void calibrate_refresh(struct k_work *work) {
+    reactive[lit_led] = 255;
+    k_work_reschedule(&calibrate_work, K_MSEC(CONFIG_RGB_PRO_TICK_MS));
+}
+
+#endif
+
 static int key_listener(const zmk_event_t *eh) {
     const struct zmk_position_state_changed *ev = as_zmk_position_state_changed(eh);
     if (ev == NULL || !ev->state || ev->position >= ARRAY_SIZE(pos_to_key)) {
@@ -56,6 +72,11 @@ static int key_listener(const zmk_event_t *eh) {
     }
 
     uint8_t led = key_to_led[key];
+#if defined(CONFIG_RGB_PRO_EYELASH_CALIBRATE)
+    reactive[lit_led] = 0;
+    lit_led = led;
+    k_work_reschedule(&calibrate_work, K_NO_WAIT);
+#endif
     reactive[led] = 255;
     rgbp_reactive_note_press(led);
     return ZMK_EV_EVENT_BUBBLE;
@@ -101,6 +122,10 @@ ZMK_SUBSCRIPTION(rgb_pro_eyelash_activity, zmk_activity_state_changed);
 static int rgb_pro_eyelash_init(void) {
     state.effect = RGB_PRO_EFF_SOLID_REACTIVE_SIMPLE;
     state.hue = 160;
+#if defined(CONFIG_RGB_PRO_EYELASH_CALIBRATE)
+    state.on = true;
+    state.brt = 60;
+#endif
 #if DT_HAS_COMPAT_STATUS_OKAY(zmk_ext_power_generic)
     k_work_reschedule(&power_work, K_NO_WAIT);
 #endif

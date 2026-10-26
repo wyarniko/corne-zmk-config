@@ -1,0 +1,7 @@
+config RGB_PRO_EYELASH_CALIBRATE
+    bool "LED map calibration mode"
+    depends on RGB_PRO
+    help
+      Pressing a key lights the LED with the same index (key N -> LED N)
+      and keeps it lit until the next press. Used with the LED mapper page
+      to find each half's real LED chain order.
