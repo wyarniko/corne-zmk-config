@@ -69,7 +69,8 @@ and the `]` HID key produces `ъ`.
 
 On the main layer, the five-way switch on the right half acts as a mouse:
 
-- directions move the pointer;
+- directions move the pointer: slowly at first, then accelerating, reaching
+  full speed after about a second of holding;
 - pressing the switch sends a left click.
 
 Transparent positions on other layers inherit this behavior, although
@@ -77,7 +78,8 @@ layer-specific service bindings can override it.
 
 On the `MOUSE` layer:
 
-- `H/J/K/L` move the pointer Vim-style: left, down, up, right;
+- `H/J/K/L` move the pointer Vim-style (left, down, up, right) with the same
+  acceleration;
 - the upper-right row controls scrolling;
 - `Q/W` change RGB hue;
 - `E/R` decrease and increase RGB brightness;

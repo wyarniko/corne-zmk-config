@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 3000
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25
 
 #include <input/processors.dtsi>
@@ -25,7 +25,6 @@
 &lt { quick-tap-ms = <219>; };
 &mt { quick-tap-ms = <219>; };
 
-&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
@@ -34,9 +33,11 @@
     delay-ms = <0>;
 };
 
+// Pointer starts slowly and speeds up quadratically, reaching full speed after
+// 1 s. Max speed comes from MOVE_VAL, not a 2x scaler, to keep 1-unit steps.
 &mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <1000>;
+    acceleration-exponent = <2>;
     trigger-period-ms = <16>;
 };
 
